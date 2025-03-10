@@ -16,6 +16,7 @@ import { useMyPositions } from 'views/PoolDetail/components/MyPositionsContext'
 import { getPoolDetailPageLink } from 'views/universalFarms/components'
 import { sumApr } from 'views/universalFarms/utils/sumApr'
 import Link from 'next/link'
+import { NextLinkFromReactRouter } from '@pancakeswap/widgets-internal'
 import { AdTag } from '../AdTag'
 import { BodyText } from '../BodyText'
 import { AdCard } from '../Card'
@@ -130,15 +131,15 @@ export const AdPicks = ({ config, index }: { config: PickConfig; index: number }
             {t('PANCAKE PICKS')} #{index + 1} 🔥
           </Text>
           {tooltipVisible && tooltip}
-          <Link
+          <NextLinkFromReactRouter
             color="primary60"
             style={{
               marginTop: '14.5px',
             }}
-            href={link}
+            to={link}
           >
             {token0.symbol}/{token1.symbol}
-          </Link>
+          </NextLinkFromReactRouter>
         </BodyText>
         <Box
           display="flex"
