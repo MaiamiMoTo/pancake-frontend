@@ -1,5 +1,5 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Box, Link, Text, useTooltip } from '@pancakeswap/uikit'
+import { Box, Text, useTooltip } from '@pancakeswap/uikit'
 import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
 import { formatAmount } from '@pancakeswap/utils/formatInfoNumbers'
 import BigNumber from 'bignumber.js'
@@ -15,6 +15,7 @@ import styled from 'styled-components'
 import { useMyPositions } from 'views/PoolDetail/components/MyPositionsContext'
 import { getPoolDetailPageLink } from 'views/universalFarms/components'
 import { sumApr } from 'views/universalFarms/utils/sumApr'
+import Link from 'next/link'
 import { AdTag } from '../AdTag'
 import { BodyText } from '../BodyText'
 import { AdCard } from '../Card'
@@ -34,7 +35,7 @@ const usePicksData = (poolId: `0x{string}`, chain: string) => {
   const numerator = useMemo(() => {
     if (!pool || !cakeApr) return BIG_ZERO // Default value if pool or cakeApr is missing
     return new BigNumber(lpApr).times(cakeApr?.userTvlUsd ?? BIG_ZERO)
-  }, [lpApr, cakeApr, cakeApr?.userTvlUsd, pool])
+  }, [lpApr, cakeApr, pool])
 
   const denominator = useMemo(() => {
     return cakeApr?.userTvlUsd ?? BIG_ZERO
@@ -145,9 +146,9 @@ export const AdPicks = ({ config, index }: { config: PickConfig; index: number }
             marginTop: '14.5px',
           }}
         >
-          <AdTag title="FEE TIER" value={`${fee}%`} index={0} />
-          <AdTag title="APR" value={`${(100 * apr).toFixed(2)}%`} index={1} />
-          <AdTag title="TVL" value={tvlAmt || '-'} index={2} />
+          <AdTag title={t('Fee Tier')} value={`${fee}%`} index={0} />
+          <AdTag title={t('APR')} value={`${(100 * apr).toFixed(2)}%`} index={1} />
+          <AdTag title={t('TVL')} value={tvlAmt || '-'} index={2} />
         </Box>
       </AdCard>
     </div>
