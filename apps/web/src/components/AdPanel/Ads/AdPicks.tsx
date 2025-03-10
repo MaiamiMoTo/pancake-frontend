@@ -15,7 +15,6 @@ import styled from 'styled-components'
 import { useMyPositions } from 'views/PoolDetail/components/MyPositionsContext'
 import { getPoolDetailPageLink } from 'views/universalFarms/components'
 import { sumApr } from 'views/universalFarms/utils/sumApr'
-import Link from 'next/link'
 import { NextLinkFromReactRouter } from '@pancakeswap/widgets-internal'
 import { AdTag } from '../AdTag'
 import { BodyText } from '../BodyText'
@@ -149,9 +148,39 @@ export const AdPicks = ({ config, index }: { config: PickConfig; index: number }
             marginTop: '14.5px',
           }}
         >
-          <AdTag title={t('Fee Tier')} value={`${fee}%`} index={0} />
-          <AdTag title={t('APR')} value={`${(100 * apr).toFixed(2)}%`} index={1} />
-          <AdTag title={t('TVL')} value={tvlAmt || '-'} index={2} />
+          <AdTag
+            title={t('Fee Tier')}
+            value={`${fee}%`}
+            index={0}
+            style={{
+              maxWidth: '70px',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }}
+          />
+          <AdTag
+            title={t('APR')}
+            value={`${(100 * apr).toFixed(2)}%`}
+            index={1}
+            style={{
+              maxWidth: '70px',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }}
+          />
+          <AdTag
+            title={t('TVL')}
+            value={tvlAmt || '-'}
+            index={2}
+            style={{
+              maxWidth: '70px',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }}
+          />
         </Box>
       </AdCard>
     </div>
@@ -167,9 +196,9 @@ const AdPicksTooltip = () => {
           'Pancake Picks are trending tokens from selected categories, filtered by meaningful metrics, and refreshed every weekday.',
         )}
       </Text>
-      <Link external href="https://docs.pancakeswap.finance/products/pancake-picks">
+      <LinkExternal href="https://docs.pancakeswap.finance/products/pancake-picks">
         {t('More Information')}
-      </Link>
+      </LinkExternal>
     </>
   )
 }
