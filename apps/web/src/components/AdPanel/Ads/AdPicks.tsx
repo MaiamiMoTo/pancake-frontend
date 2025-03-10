@@ -1,5 +1,5 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Box, Text, useTooltip } from '@pancakeswap/uikit'
+import { Box, LinkExternal, Text, useTooltip } from '@pancakeswap/uikit'
 import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
 import { formatAmount } from '@pancakeswap/utils/formatInfoNumbers'
 import BigNumber from 'bignumber.js'
@@ -131,6 +131,8 @@ export const AdPicks = ({ config, index }: { config: PickConfig; index: number }
             {t('PANCAKE PICKS')} #{index + 1} 🔥
           </Text>
           {tooltipVisible && tooltip}
+        </BodyText>
+        <Box>
           <NextLinkFromReactRouter
             color="primary60"
             style={{
@@ -140,7 +142,7 @@ export const AdPicks = ({ config, index }: { config: PickConfig; index: number }
           >
             {token0.symbol}/{token1.symbol}
           </NextLinkFromReactRouter>
-        </BodyText>
+        </Box>
         <Box
           display="flex"
           style={{
