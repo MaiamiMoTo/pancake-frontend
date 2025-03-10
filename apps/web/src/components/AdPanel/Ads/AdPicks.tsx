@@ -132,15 +132,15 @@ export const AdPicks = ({ config, index }: { config: PickConfig; index: number }
           </Text>
           {tooltipVisible && tooltip}
         </BodyText>
-        <Box>
-          <NextLinkFromReactRouter
-            color="primary60"
-            style={{
-              marginTop: '14.5px',
-            }}
-            to={link}
-          >
-            {token0.symbol}/{token1.symbol}
+        <Box
+          style={{
+            marginTop: '14.5px',
+          }}
+        >
+          <NextLinkFromReactRouter to={link}>
+            <Text color="primary60">
+              {token0.symbol}/{token1.symbol}
+            </Text>
           </NextLinkFromReactRouter>
         </Box>
         <Box
