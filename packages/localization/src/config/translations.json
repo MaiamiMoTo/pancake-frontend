@@ -3768,7 +3768,6 @@
   "from the following nationalities are currently not eligible to participate in this event: Belarus, Myanmar, Côte d'Ivoire, Cuba, Iran, Iraq, Liberia, Sudan, Syria, Zimbabwe, Congo (Kinshasa), North Korea.": "from the following nationalities are currently not eligible to participate in this event: Belarus, Myanmar, Côte d'Ivoire, Cuba, Iran, Iraq, Liberia, Sudan, Syria, Zimbabwe, Congo (Kinshasa), North Korea.",
   "Please ensure you comply with the eligibility requirements before participating.": "Please ensure you comply with the eligibility requirements before participating.",
   "1 hour": "1 hour",
-  "members who trade on PancakeSwap on Base, BNB, or Arbitrum are eligible to earn a portion of $8453 airdropped to their wallet biweekly! Must trade a minimum of $100 to qualify.": "members who trade on PancakeSwap on Base, BNB, or Arbitrum are eligible to earn a portion of $8453 airdropped to their wallet biweekly! Must trade a minimum of $100 to qualify.",
   "Favorite DEX": "Favorite DEX",
   "Trade Crypto Instantly Across %count%+ Chains": "Trade Crypto Instantly Across %count%+ Chains",
   "All Time Traders": "All Time Traders",
@@ -3776,7 +3775,6 @@
   "All Time LP Fees": "All Time LP Fees",
   "Vote for CAKE Emissions": "Vote for CAKE Emissions",
   "on over 600+ Pools": "on over 600+ Pools",
-  "%burned%M+ BURN • $%marketCap% MKT. CAP": "%burned%M+ BURN • $%marketCap% MKT. CAP",
   "TOTAL VOTES: %totalVotes%": "TOTAL VOTES: %totalVotes%",
   "Rewards/Epoch": "Rewards/Epoch",
   "Swap with Best Prices": "Swap with Best Prices",
@@ -3789,8 +3787,9 @@
   "Last Top Winner": "Last Top Winner",
   "Featured on PancakeSwap": "Featured on PancakeSwap",
   "leverage": "leverage",
-  "Bridge across %num% Chains Now": "Bridge across %num% Chains Now",
   "Earn Trading Fees": "Earn Trading Fees",
   "by Providing Liquidity": "by Providing Liquidity",
-  "Choose from %num% Currencies": "Choose from %num% Currencies"
+  "Choose from %num% Currencies": "Choose from %num% Currencies",
+  "Bridge across %num% chains": "Bridge across %num% chains",
+  "%burned% BURN • $%marketCap% MKT. CAP": "%burned% BURN • $%marketCap% MKT. CAP"
 }
